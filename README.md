@@ -10,6 +10,7 @@ J'ai Crée ce git pour la configuration de mon Mac
 brew update
 brew install git
 brew install node
+brew cask install mos
 brew cask install postman
 brew cask install visual-studio-code
 brew cask install iterm2
@@ -64,4 +65,4 @@ mkdir /Users/guillaumedorschner/Git
 # Les plus pour un Mac
 
 - Magnet
-- Mos
+- Mos (deja fait avec brew)
