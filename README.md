@@ -37,5 +37,22 @@ brew cask install visual-studio-code
 # install vscode extensions 
 ````
 
+Parametre de VSCode:
+> Preferences > settings (JSON)
 
-while read line; do code --install-extension "$line";done < vscode-extensions.txt
+```
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "python.showStartPage": false,
+    "python.pythonPath": "/usr/local/bin/python3",
+    "editor.cursorSmoothCaretAnimation": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Material Theme Ocean High Contrast",
+    "terminal.integrated.shell.osx": "/bin/bash",
+    "explorer.confirmDelete": false,
+    "breadcrumbs.enabled": true,
+    "editor.renderWhitespace": "none",
+    "editor.formatOnSave": true,
+    "explorer.confirmDragAndDrop": false
+}
+```
