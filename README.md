@@ -5,19 +5,18 @@ J'ai Crée ce git pour la configuration de mon Mac
 # brew:
 
 ````
+# install brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew update
 brew cask install iterm2
-# update iterm2 settings -> colors, keep directory open new shell, keyboard shortcuts
+# update iterm2 settings -> colors
 brew install git
 brew install node
 brew cask install postman
 brew cask install visual-studio-code
-# update vscode settings
-# install vscode extensions 
 ````
 
-# Parametre de VSCode:
+# Setting de VSCode:
 > Preferences > settings (JSON)
 
 ```
