@@ -8,12 +8,12 @@ J'ai Crée ce git pour la configuration de mon Mac
 # install brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew update
-brew cask install iterm2
-# update iterm2 settings -> colors
 brew install git
 brew install node
 brew cask install postman
 brew cask install visual-studio-code
+brew cask install iterm2
+# update iterm2 settings -> colors
 ````
 
 # Setting de VSCode:
