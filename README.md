@@ -58,6 +58,9 @@ brew cask install iterm2
 - Spotify
 - Docker
 
+# Working directory
+mkdir /Users/guillaumedorschner/Git
+
 # Les plus pour un Mac
 
 - Magnet
