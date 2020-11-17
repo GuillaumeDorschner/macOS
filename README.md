@@ -1,5 +1,6 @@
 # Setup Mac
 
+J'ai Crée ce git pour la configuration de mon Mac
 
 # brew:
 
@@ -16,7 +17,7 @@ brew cask install visual-studio-code
 # install vscode extensions 
 ````
 
-Parametre de VSCode:
+# Parametre de VSCode:
 > Preferences > settings (JSON)
 
 ```
@@ -35,6 +36,15 @@ Parametre de VSCode:
     "explorer.confirmDragAndDrop": false
 }
 ```
+
+# Extention de VSCode
+
+- Community Material Theme
+- Material Theme Icons
+- Python
+- Svelte 3 Snippets
+- Svelte for VS Code
+
 
 # Les logiciel a installer sont:
 
