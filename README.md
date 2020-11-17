@@ -1,4 +1,4 @@
-# Setup Mac
+# Setup Mac 🖥
 
 J'ai Crée ce git pour la configuration de mon Mac
 
