@@ -1,8 +1,8 @@
 # Setup Mac 🖥
 
-J'ai Crée ce git pour la configuration de mon Mac
+I wrote this git for the configuration of my Mac
 
-# brew:
+# brew
 
 ````
 # install brew
@@ -17,7 +17,8 @@ brew cask install iterm2
 # update iterm2 settings -> colors
 ````
 
-# Setting de VSCode:
+# Setting de VSCode
+
 > Preferences > settings (JSON)
 
 ```
@@ -46,7 +47,7 @@ brew cask install iterm2
 - Svelte for VS Code
 
 
-# Les logiciel a installer sont:
+# The software to install
 
 - chrome
 - visual studio code
@@ -60,9 +61,10 @@ brew cask install iterm2
 - Docker
 
 # Working directory
+
 mkdir /Users/guillaumedorschner/Git
 
-# Les plus pour un Mac
+# The extras for a Mac
 
 - Magnet
-- Mos (deja fait avec brew)
+- Mos (already done with brew)
