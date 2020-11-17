@@ -2,6 +2,17 @@
 
 Les logiciel a installer sont:
 
+- chrome
+- visual studio code
+- Gitkraken
+- Iterm
+- Figma
+- Dashlane
+- Notion
+- Telegram
+- Spotify
+
+
 Homebrew/terminal/bash
 OSX Productivity - Window Management/Quick Launcher/Hyperswitch
 OSX Settings - Dock/Finder
@@ -10,8 +21,6 @@ Node.js - nvm
 Code Editor - vs code
 Code Editor Extensions
 Break timer and Flux
-
-chrome, visual studio code, Gitkraken, Iterm, Figma, Dashlane, Notion Telegram, Spotify
 
 ligicel brew:
 
@@ -27,3 +36,6 @@ brew cask install visual-studio-code
 # update vscode settings
 # install vscode extensions 
 ````
+
+
+while read line; do code --install-extension "$line";done < vscode-extensions.txt
