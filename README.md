@@ -57,3 +57,8 @@ brew cask install iterm2
 - Telegram
 - Spotify
 - Docker
+
+# Les plus pour un Mac
+
+- Magnet
+- Mos
