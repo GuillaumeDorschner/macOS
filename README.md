@@ -57,7 +57,7 @@ brew cask install spotify
 ```
 brew cask install postman
 ```
-- Docker (You can't download via brew)
+- Docker (You can't download via brew)  
 https://docs.docker.com/docker-for-mac/install/
 
 # Add Working directory For Prgrammation
