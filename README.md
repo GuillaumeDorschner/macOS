@@ -60,7 +60,7 @@ brew cask install postman
 - Docker (You can't download via brew)  
 https://docs.docker.com/docker-for-mac/install/
 
-# Add Working directory For Prgrammation
+# Add Working directory To Program
 
 mkdir /Users/guillaumedorschner/Git
 
