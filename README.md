@@ -26,6 +26,10 @@ brew cask install iterm2
 ```
 brew cask install google-chrome
 ```
+- Dashlane
+```
+brew cask install dashlane
+```
 - Visual Studio Code
 ```
 brew cask install visual-studio-code
@@ -37,10 +41,6 @@ brew cask install gitkraken
 - Figma
 ```
 brew cask install figma
-```
-- Dashlane
-```
-brew cask install dashlane
 ```
 - Notion
 ```
