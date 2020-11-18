@@ -5,7 +5,6 @@ I wrote this git for the configuration of my Mac
 # Install brew
 
 ```
-# install brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew update
 ```
