@@ -2,7 +2,7 @@
 
 I wrote this git for the configuration of my Mac
 
-# brew
+# Install brew
 
 ```
 # install brew
@@ -16,7 +16,7 @@ brew install git
 brew install node
 ````
 
-# The software to install
+# Install the softwares 
 
 - Iterm2 (update iterm2 settings -> colors)
 ```
