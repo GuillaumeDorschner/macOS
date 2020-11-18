@@ -57,15 +57,16 @@ brew cask install spotify
 ```
 brew cask install postman
 ```
-- Docker
+- Docker (You can't download via brew)
+https://docs.docker.com/docker-for-mac/install/
 
-# Working directory
+# Add Working directory For Prgrammation
 
 mkdir /Users/guillaumedorschner/Git
 
 # The extras for a Mac
 
-- Magnet
+- Magnet (it's in the app store)
 - Mos
 ```
 brew cask install mos
