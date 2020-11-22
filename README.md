@@ -13,9 +13,13 @@ brew update
 ```
 brew install git
 brew install node
-# npm package for reload js files on change
+```
+npm package for reload js files on change
+```
 npm install -g nodemon
-# npm package makes copies of git repositories
+```
+npm package makes copies of git repositories
+```
 npm install -g degit
 ````
 
