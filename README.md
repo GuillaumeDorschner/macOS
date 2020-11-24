@@ -13,6 +13,7 @@ brew update
 ```
 brew install git
 brew install node
+brew install python
 ```
 npm package for reload js files on change
 ```
