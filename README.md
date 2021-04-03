@@ -14,6 +14,7 @@ brew update
 brew install git
 brew install node
 brew install python
+brew install rustup-init
 ```
 npm package for reload js files on change
 ```
@@ -109,3 +110,4 @@ brew cask install mos
 - Python
 - Svelte 3 Snippets
 - Svelte for VS Code
+- Tabnine
