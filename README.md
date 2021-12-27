@@ -24,6 +24,16 @@ npm package makes copies of git repositories
 ```
 npm install -g degit
 ````
+nvm installation
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+```
+then restart the terminal and create a file nano ~/.zshrc and paste it the code below
+```
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+```
+
 
 # Install the softwares 
 
