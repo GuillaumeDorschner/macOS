@@ -14,9 +14,13 @@ brew update
 ```
 alias finder='open -a Finder .'
 alias python='python3'
+
+mcd() {
+  mkdir -p "$1" && cd "$1"
+}
 ```
 
-## Autocompli
+## Autocomplete
 
 ```source <(kubectl completion zsh)```
 
