@@ -2,14 +2,25 @@
 
 I wrote this git for the configuration of my Mac
 
-# Install brew
+## Install brew
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew update
 ```
 
-# Bases
+## Alias
+
+```
+alias finder='open -a Finder .'
+alias python='python3'
+```
+
+## Autocompli
+
+```source <(kubectl completion zsh)```
+
+## Bases
 ```
 brew install git
 brew install node
@@ -35,7 +46,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 ```
 
 
-# Install the softwares 
+## Install the softwares 
 
 - Iterm2 (update iterm2 settings -> colors)
 ```
@@ -80,11 +91,11 @@ brew cask install postman
 - Docker (You can't download via brew)  
 https://docs.docker.com/docker-for-mac/install/
 
-# Add Working directory To Program
+## Add Working directory To Program
 
 mkdir /Users/guillaumedorschner/Git
 
-# The extras for a Mac
+## The extras for a Mac
 
 - Magnet (it's in the app store)
 - Mos
@@ -92,7 +103,7 @@ mkdir /Users/guillaumedorschner/Git
 brew cask install mos
 ```
 
-# Setting de VSCode
+## Setting de VSCode
 
 > Preferences > settings (JSON)
 
@@ -113,7 +124,7 @@ brew cask install mos
 }
 ```
 
-# Extention de VSCode
+## Extention de VSCode
 
 - Community Material Theme
 - Material Theme Icons
