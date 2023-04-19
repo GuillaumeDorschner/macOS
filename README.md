@@ -56,10 +56,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 ```
 brew cask install iterm2
 ```
-- Chrome
-```
-brew cask install google-chrome
-```
 - Dashlane
 ```
 brew cask install dashlane
@@ -83,14 +79,6 @@ brew cask install notion
 - Telegram
 ```
 brew cask install telegram
-```
-- Spotify
-```
-brew cask install spotify
-```
-- PostMan
-```
-brew cask install postman
 ```
 - Docker (You can't download via brew)  
 https://docs.docker.com/docker-for-mac/install/
@@ -135,4 +123,3 @@ brew cask install mos
 - Python
 - Svelte 3 Snippets
 - Svelte for VS Code
-- Tabnine
