@@ -15,13 +15,17 @@ brew update
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 brew install neofetch
 cat <<EOF >> ~/.zshrc
-export ZSH="\$HOME/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
+
 ZSH_THEME="robbyrussell"
+
 plugins=(
-        git
-        sudo
-)
-source \$ZSH/oh-my-zsh.sh
+	git
+	sudo
+	)
+
+source $ZSH/oh-my-zsh.sh
+
 neofetch --ascii ~/.config/neofetch/ascii-art.txt
 EOF
 cat <<EOF >> ~/.config/neofetch/ascii-art.txt
@@ -51,6 +55,7 @@ print_info() {
     info " ​ ​ ${cl1}██ WM" wm
     info " ​ ​ ${cl7}██ Shell" shell
     info " ​ ​ ${cl3}██ Packages" packages 
+    info " ​ ​ ${cl6}██ MEM" memory
     info cols
 }
 
@@ -146,7 +151,6 @@ yoffset=0
 xoffset=0
 
 stdout="off"
-EOF
 ```
 
 
