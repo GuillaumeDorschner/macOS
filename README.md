@@ -157,12 +157,18 @@ stdout="off"
 ## Alias
 
 ```
+cat << EOF >> ~/.zshrc
+alias dcr='docker compose down && docker compose up -d --build'
+alias dkc='docker rm -f $(docker ps -a -q)'
+alias dki='docker rmi -f $(docker images -q)'
+
 alias finder='open -a Finder .'
 alias python='python3'
 
 mcd() {
   mkdir -p "$1" && cd "$1"
 }
+EOF
 ```
 
 ## Autocomplete
