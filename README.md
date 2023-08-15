@@ -173,7 +173,11 @@ EOF
 
 ## Autocomplete
 
-```source <(kubectl completion zsh)```
+```
+brew install bash-completion
+source <(kubectl completion zsh)
+echo "source <(kubectl completion zsh)" >> ~/.zshrc
+```
 
 ## Bases
 ```
@@ -181,17 +185,11 @@ brew install git
 brew install node
 brew install python
 brew install rustup-init
-```
-npm package for reload js files on change
-```
+# npm package for reload js files on change
 npm install -g nodemon
-```
-npm package makes copies of git repositories
-```
+# npm package makes copies of git repositories
 npm install -g degit
-````
-nvm installation
-```
+# nvm installation
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 ```
 then restart the terminal and create a file nano ~/.zshrc and paste it the code below
@@ -206,29 +204,11 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 - Iterm2 (update iterm2 settings -> colors)
 ```
 brew cask install iterm2
-```
-- Dashlane
-```
 brew cask install dashlane
-```
-- Visual Studio Code
-```
 brew cask install visual-studio-code
-```
-- Gitkraken
-```
 brew cask install gitkraken
-```
-- Figma
-```
 brew cask install figma
-```
-- Notion
-```
 brew cask install notion
-```
-- Telegram
-```
 brew cask install telegram
 ```
 - Docker (You can't download via brew)  
