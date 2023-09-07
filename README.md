@@ -222,7 +222,7 @@ mkdir /Users/guillaumedorschner/Git
 
 ```
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.DiskArbitration.diskarbitrationd.plist DADisableEjectNotification -bool YES && sudo pkill diskarbitrationd
-defaults write com.apple.screencapture type jpg
+# defaults write com.apple.screencapture type jpg
 ```
 
 ## The extras for a Mac
