@@ -218,11 +218,13 @@ https://docs.docker.com/docker-for-mac/install/
 
 mkdir /Users/guillaumedorschner/Git
 
-## 𝗗𝗶𝘀𝗮𝗯𝗹𝗲 𝗔𝗻𝗻𝗼𝘆𝗶𝗻𝗴 𝗗𝗶𝘀𝗸 𝗪𝗮𝗿𝗻𝗶𝗻𝗴 
+## 𝗗𝗶𝘀𝗮𝗯𝗹𝗲 𝗔𝗻𝗻𝗼𝘆𝗶𝗻𝗴 𝗗𝗶𝘀𝗸 𝗪𝗮𝗿𝗻𝗶𝗻𝗴 and capture to jpg
 
 ```
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.DiskArbitration.diskarbitrationd.plist DADisableEjectNotification -bool YES && sudo pkill diskarbitrationd
+defaults write com.apple.screencapture type jpg
 ```
+
 ## The extras for a Mac
 
 - Magnet (it's in the app store)
