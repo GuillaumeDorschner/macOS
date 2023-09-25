@@ -14,20 +14,22 @@ brew update
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 brew install neofetch
+
+echo -e "install neofetch / oh my zsh"
 cat <<EOF >> ~/.zshrc
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
 
-plugins=(
-	git
-	sudo
-	)
+plugins=(git sudo kubectl)
 
 source $ZSH/oh-my-zsh.sh
-
 neofetch --ascii ~/.config/neofetch/ascii-art.txt
+source <(kubectl completion zsh)
+source <(helm completion zsh)
 EOF
+
+echo -e "oh-my-zsh set"
 cat <<EOF >> ~/.config/neofetch/ascii-art.txt
       %%% %%%%%%%            |#|
     %%%% %%%%%%%%%%%        |#|####
@@ -38,6 +40,8 @@ cat <<EOF >> ~/.config/neofetch/ascii-art.txt
 %    %%%% %  u^uuu %%     | |         ==#
       %%%% %%%%%%%%%      | |           V
 EOF
+
+echo -e "Neofetch set"
 cat <<EOF >> ~/.config/neofetch/config.conf
 # Source: https://github.com/Chick2D/neofetch-themes/ 
 # Do consider checking out the repository, it has a ton of great configs like this.
