@@ -27,6 +27,18 @@ source $ZSH/oh-my-zsh.sh
 neofetch --ascii ~/.config/neofetch/ascii-art.txt
 source <(kubectl completion zsh)
 source <(helm completion zsh)
+
+
+alias dcr='docker compose down && docker compose up -d --build'
+alias dkc='docker rm -f $(docker ps -a -q)'
+alias dki='docker rmi -f $(docker images -q)'
+
+alias finder='open -a Finder .'
+alias python='python3'
+
+mcd() {
+  mkdir -p "$1" && cd "$1"
+}
 EOF
 
 echo -e "oh-my-zsh set"
@@ -157,32 +169,6 @@ xoffset=0
 stdout="off"
 ```
 
-
-## Alias
-
-```
-cat << EOF >> ~/.zshrc
-alias dcr='docker compose down && docker compose up -d --build'
-alias dkc='docker rm -f $(docker ps -a -q)'
-alias dki='docker rmi -f $(docker images -q)'
-
-alias finder='open -a Finder .'
-alias python='python3'
-
-mcd() {
-  mkdir -p "$1" && cd "$1"
-}
-EOF
-```
-
-## Autocomplete
-
-```
-brew install bash-completion
-source <(kubectl completion zsh)
-echo "source <(kubectl completion zsh)" >> ~/.zshrc
-```
-
 ## Bases
 ```
 brew install git
@@ -219,18 +205,17 @@ brew cask install telegram
 https://docs.docker.com/docker-for-mac/install/
 
 ## Add Working directory To Program
-
+```
 mkdir /Users/guillaumedorschner/Git
+```
 
 ## 𝗗𝗶𝘀𝗮𝗯𝗹𝗲 𝗔𝗻𝗻𝗼𝘆𝗶𝗻𝗴 𝗗𝗶𝘀𝗸 𝗪𝗮𝗿𝗻𝗶𝗻𝗴 and capture to jpg
-
 ```
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.DiskArbitration.diskarbitrationd.plist DADisableEjectNotification -bool YES && sudo pkill diskarbitrationd
 # defaults write com.apple.screencapture type jpg
 ```
 
 ## The extras for a Mac
-
 - Magnet (it's in the app store)
 - Mos
 ```
