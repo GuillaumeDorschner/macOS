@@ -21,17 +21,12 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
 
-plugins=(git sudo kubectl)
+plugins=(git sudo kubectl docker docker-compose doctl)
 
 source $ZSH/oh-my-zsh.sh
 neofetch --ascii ~/.config/neofetch/ascii-art.txt
 source <(kubectl completion zsh)
 source <(helm completion zsh)
-
-
-alias dcr='docker compose down && docker compose up -d --build'
-alias dkc='docker rm -f $(docker ps -a -q)'
-alias dki='docker rmi -f $(docker images -q)'
 
 alias finder='open -a Finder .'
 alias python='python3'
@@ -39,6 +34,9 @@ alias python='python3'
 mcd() {
   mkdir -p "$1" && cd "$1"
 }
+
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+export PATH="/usr/local/opt/ruby/bin:$PATH"
 EOF
 
 echo -e "oh-my-zsh set"
@@ -177,6 +175,7 @@ brew install python
 brew install rustup-init
 # npm package for reload js files on change
 npm install -g nodemon
+npm install -g pnpm
 # npm package makes copies of git repositories
 npm install -g degit
 # nvm installation
@@ -188,18 +187,26 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 ```
 
+## Brew dev
+
+```bash
+brew install ansible
+brew instal k9s
+brew insatll nmap
+```
+
 
 ## Install the softwares 
 
 - Iterm2 (update iterm2 settings -> colors)
 ```
-brew cask install iterm2
-brew cask install dashlane
-brew cask install visual-studio-code
-brew cask install gitkraken
-brew cask install figma
-brew cask install notion
-brew cask install telegram
+brew install iterm2 --cask
+brew install dashlane --cask
+brew install visual-studio-code --cask
+brew install gitkraken --cask
+brew install figma --cask
+brew install notion --cask
+brew install telegram --cask
 ```
 - Docker (You can't download via brew)  
 https://docs.docker.com/docker-for-mac/install/
@@ -207,6 +214,7 @@ https://docs.docker.com/docker-for-mac/install/
 ## Add Working directory To Program
 ```
 mkdir /Users/guillaumedorschner/Git
+mkdir /Users/guillaumedorschner/Dev
 ```
 
 ## 𝗗𝗶𝘀𝗮𝗯𝗹𝗲 𝗔𝗻𝗻𝗼𝘆𝗶𝗻𝗴 𝗗𝗶𝘀𝗸 𝗪𝗮𝗿𝗻𝗶𝗻𝗴 and capture to jpg
