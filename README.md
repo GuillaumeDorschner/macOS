@@ -1,16 +1,13 @@
 # Setup Mac 🖥
-
 I wrote this git for the configuration of my Mac
 
 ## Install brew
-
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew update
 ```
 
 ## Oh-my-zsh
-
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 brew install neofetch
@@ -233,6 +230,7 @@ brew install git
 brew install node
 brew install python
 brew install rustup-init
+brew install --cask mactex
 # npm package for reload js files on change
 npm install -g nodemon
 npm install -g pnpm
@@ -248,7 +246,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 ```
 
 ## Brew dev
-
 ```bash
 brew install ansible
 brew instal k9s
@@ -257,16 +254,14 @@ brew insatll nmap
 
 
 ## Install the softwares 
-
 - Iterm2 (update iterm2 settings -> colors)
 ```
-brew install iterm2 --cask
-brew install dashlane --cask
-brew install visual-studio-code --cask
-brew install gitkraken --cask
-brew install figma --cask
-brew install notion --cask
-brew install telegram --cask
+brew install --cask iterm2
+brew install --cask visual-studio-code
+brew install --cask gitkraken
+brew install --cask figma
+brew install --cask notion
+brew install --cask telegram
 ```
 - Docker (You can't download via brew)  
 https://docs.docker.com/docker-for-mac/install/
@@ -291,30 +286,150 @@ brew cask install mos
 ```
 
 ## Setting de VSCode
-
-> Preferences > settings (JSON)
-
+With `Commande`+`Shift`+`P` go to `Preferences > settings (JSON)` paste the following:
 ```
 {
-    "workbench.startupEditor": "newUntitledFile",
-    "python.showStartPage": false,
-    "python.pythonPath": "/usr/local/bin/python3",
-    "editor.cursorSmoothCaretAnimation": true,
+    "editor.inlineSuggest.enabled": true,
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        // "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+          "source.organizeImports": "explicit",
+          "source.fixAll": "explicit"
+        }
+      },
+      "ruff.path": [
+        "/Library/Frameworks/Python.framework/Versions/3.11/bin/ruff"
+      ],
+      "black-formatter.path": [
+        "/Library/Frameworks/Python.framework/Versions/3.11/bin/black"
+      ],
+      "black-formatter.args": [
+        "--line-length",
+        "80",
+        "--experimental-string-processing"
+      ],
+    "github.copilot.enable": {
+      "*": true,
+      "plaintext": true,
+      "markdown": true,
+      "scminput": false,
+      "yaml": true,
+      "python": true
+    },
+    // Notebook
+    "notebook.formatOnCellExecution": true,
+    "notebook.formatOnSave.enabled": true,
+
+    "notebook.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "workbench.startupEditor": "none",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "python.defaultInterpreterPath": "/usr/local/bin/python3",
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Material Theme Ocean High Contrast",
-    "terminal.integrated.shell.osx": "/bin/bash",
+    "redhat.telemetry.enabled": true,
     "explorer.confirmDelete": false,
-    "breadcrumbs.enabled": true,
-    "editor.renderWhitespace": "none",
-    "editor.formatOnSave": true,
-    "explorer.confirmDragAndDrop": false
+    "security.workspace.trust.enabled": false,
+    "security.workspace.trust.untrustedFiles": "newWindow",
+    "explorer.confirmDragAndDrop": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "git.autofetch": true,
+    "workbench.editorAssociations": {
+      "*.pdf": "latex-workshop-pdf-hook"
+    },
+    "codesnap.backgroundColor": "",
+    "codesnap.showWindowTitle": true,
+    "codesnap.shutterAction": "copy",
+    "codesnap.transparentBackground": true,
+    "codesnap.boxShadow": "rgba(0, 0, 0, 0.45) 0px 8px 28px",
+    "vs-kubernetes": {
+        "vscode-kubernetes.minikube-path.mac": "/Users/guillaumedorschner/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
+        "vs-kubernetes.minikube-show-information-expiration": "2024-06-08T09:06:34.356Z"
+    },
+    "dart.previewFlutterUiGuides": true,
+    "dart.previewFlutterUiGuidesCustomTracking": true,
+    "dart.showInspectorNotificationsForWidgetErrors": false,
+    "dart.debugExternalPackageLibraries": true,
+    "dart.debugSdkLibraries": false,
+    "svelte.enable-ts-plugin": true,
+    "application.shellEnvironmentResolutionTimeout": 50,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.editor.labelFormat": "short",
+    "explorer.compactFolders": false,
+    "workbench.colorTheme": "Material Theme Ocean High Contrast",
+    "markdown.marp.chromePath": "/Applications/Brave Browser.app",
+    "markdown.marp.enableHtml": true,
+    "jupyter.askForKernelRestart": false,
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[yaml]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "explorer.confirmPasteNative": false,
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+
+
+    "latex-workshop.latex.tools": [
+      {
+          "name": "latexmk",
+          "command": "xelatex",
+          "args": [
+              "-xelatex",
+              "-interaction=nonstopmode",
+              "-outdir=%OUTDIR%",
+              "%DOCFILE%"
+          ]
+      },
+],
+"ruff.lint.args": [
+  "--disable=W"
+]
 }
 ```
 
 ## Extention de VSCode
-
+- C++
+- C#
+- CodeSnap
+- CQL
+- Dart
+- Dev Container
+- Docker
+- Error Lens
+- Flutter
+- Jupyter
+- Koltin
+- Kubernetes
+- LateX Works
+- Live Server
+- Live Share
+- Manim SideView
+- Markdown All in one
+- Markdown Preview Enhanced
+- Markdown Preview Mermaid Support
+- Marp
 - Community Material Theme
 - Material Theme Icons
+- Mermaid Markdown
+- Prettier
+- Prisma
 - Python
+- R
+- Reload
+- Remote SSH
+- Ruff
+- Rust Analyser
 - Svelte 3 Snippets
 - Svelte for VS Code
+- YAML
+- VIM
