@@ -289,111 +289,117 @@ brew cask install mos
 With `Commande`+`Shift`+`P` go to `Preferences > settings (JSON)` paste the following:
 ```
 {
-    "editor.inlineSuggest.enabled": true,
-    "[python]": {
-        "editor.formatOnSave": true,
-        "editor.tabSize": 4,
-        "editor.defaultFormatter": "ms-python.black-formatter",
-        // "editor.defaultFormatter": "charliermarsh.ruff",
-        "editor.codeActionsOnSave": {
-          "source.organizeImports": "explicit",
-          "source.fixAll": "explicit"
-        }
-      },
-      "ruff.path": [
-        "/Library/Frameworks/Python.framework/Versions/3.11/bin/ruff"
-      ],
-      "black-formatter.path": [
-        "/Library/Frameworks/Python.framework/Versions/3.11/bin/black"
-      ],
-      "black-formatter.args": [
-        "--line-length",
-        "80",
-        "--experimental-string-processing"
-      ],
-    "github.copilot.enable": {
-      "*": true,
-      "plaintext": true,
-      "markdown": true,
-      "scminput": false,
-      "yaml": true,
-      "python": true
-    },
-    // Notebook
-    "notebook.formatOnCellExecution": true,
-    "notebook.formatOnSave.enabled": true,
-
-    "notebook.codeActionsOnSave": {
-      "source.organizeImports": true
-    },
-    "workbench.startupEditor": "none",
-    "editor.cursorSmoothCaretAnimation": "on",
-    "python.defaultInterpreterPath": "/usr/local/bin/python3",
-    "workbench.iconTheme": "material-icon-theme",
-    "redhat.telemetry.enabled": true,
-    "explorer.confirmDelete": false,
-    "security.workspace.trust.enabled": false,
-    "security.workspace.trust.untrustedFiles": "newWindow",
-    "explorer.confirmDragAndDrop": false,
-    "liveServer.settings.donotShowInfoMsg": true,
-    "terminal.integrated.enableMultiLinePasteWarning": false,
-    "git.autofetch": true,
-    "workbench.editorAssociations": {
-      "*.pdf": "latex-workshop-pdf-hook"
-    },
-    "codesnap.backgroundColor": "",
-    "codesnap.showWindowTitle": true,
-    "codesnap.shutterAction": "copy",
-    "codesnap.transparentBackground": true,
-    "codesnap.boxShadow": "rgba(0, 0, 0, 0.45) 0px 8px 28px",
-    "vs-kubernetes": {
-        "vscode-kubernetes.minikube-path.mac": "/Users/guillaumedorschner/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
-        "vs-kubernetes.minikube-show-information-expiration": "2024-06-08T09:06:34.356Z"
-    },
-    "dart.previewFlutterUiGuides": true,
-    "dart.previewFlutterUiGuidesCustomTracking": true,
-    "dart.showInspectorNotificationsForWidgetErrors": false,
-    "dart.debugExternalPackageLibraries": true,
-    "dart.debugSdkLibraries": false,
-    "svelte.enable-ts-plugin": true,
-    "application.shellEnvironmentResolutionTimeout": 50,
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "workbench.editor.labelFormat": "short",
-    "explorer.compactFolders": false,
-    "workbench.colorTheme": "Material Theme Ocean High Contrast",
-    "markdown.marp.chromePath": "/Applications/Brave Browser.app",
-    "markdown.marp.enableHtml": true,
-    "jupyter.askForKernelRestart": false,
-    "[json]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[yaml]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "explorer.confirmPasteNative": false,
-    "[jsonc]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
+  "editor.inlineSuggest.enabled": true,
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    // "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit",
+      "source.fixAll": "explicit"
+    }
+  },
+  "ruff.path": ["/Library/Frameworks/Python.framework/Versions/3.11/bin/ruff"],
+  "black-formatter.path": [
+    "/Library/Frameworks/Python.framework/Versions/3.11/bin/black"
+  ],
+  "black-formatter.args": [
+    "--line-length",
+    "80",
+    "--experimental-string-processing"
+  ],
+  "ruff.lint.args": ["--disable=W"],
 
 
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false,
+    "yaml": true,
+    "python": true
+  },
 
-    "latex-workshop.latex.tools": [
-      {
-          "name": "latexmk",
-          "command": "xelatex",
-          "args": [
-              "-xelatex",
-              "-interaction=nonstopmode",
-              "-outdir=%OUTDIR%",
-              "%DOCFILE%"
-          ]
-      },
-],
-"ruff.lint.args": [
-  "--disable=W"
-]
+
+  // Notebook
+  "notebook.formatOnCellExecution": true,
+  "notebook.formatOnSave.enabled": true,
+  "notebook.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+
+
+  "workbench.startupEditor": "none",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "python.defaultInterpreterPath": "/usr/local/bin/python3",
+  "workbench.iconTheme": "material-icon-theme",
+  "redhat.telemetry.enabled": true,
+  "explorer.confirmDelete": false,
+  "security.workspace.trust.enabled": false,
+  "security.workspace.trust.untrustedFiles": "newWindow",
+  "explorer.confirmDragAndDrop": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "git.autofetch": true,
+  "workbench.editorAssociations": {
+    "*.pdf": "latex-workshop-pdf-hook"
+  },
+  "codesnap.backgroundColor": "",
+  "codesnap.showWindowTitle": true,
+  "codesnap.shutterAction": "copy",
+  "codesnap.transparentBackground": true,
+  "codesnap.boxShadow": "rgba(0, 0, 0, 0.45) 0px 8px 28px",
+  "vs-kubernetes": {
+    "vscode-kubernetes.minikube-path.mac": "/Users/guillaumedorschner/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
+    "vs-kubernetes.minikube-show-information-expiration": "2024-06-08T09:06:34.356Z"
+  },
+  "dart.previewFlutterUiGuides": true,
+  "dart.previewFlutterUiGuidesCustomTracking": true,
+  "dart.showInspectorNotificationsForWidgetErrors": false,
+  "dart.debugExternalPackageLibraries": true,
+  "dart.debugSdkLibraries": false,
+  "svelte.enable-ts-plugin": true,
+  "application.shellEnvironmentResolutionTimeout": 50,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editor.labelFormat": "short",
+  "explorer.compactFolders": false,
+  "workbench.colorTheme": "Material Theme Ocean High Contrast",
+  "markdown.marp.chromePath": "/Applications/Brave Browser.app",
+  "markdown.marp.enableHtml": true,
+  "jupyter.askForKernelRestart": false,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.confirmPasteNative": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  
+  // Latex
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.recipe.default": "lastUsed",
+  "latex-workshop.synctex.afterBuild.enabled": true,
+  "latex-workshop.latex.autoClean.run": "onBuilt",
+  "latex-workshop.view.outline.sync.viewer": true,
+  "latex-workshop.latex.tools": [
+    {
+        "name": "latexmk",
+        "command": "xelatex",
+        "args": [
+            "-xelatex",
+            "-interaction=nonstopmode",
+            "-outdir=%OUTDIR%",
+            "%DOCFILE%"
+        ]
+    }]
 }
 ```
 
