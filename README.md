@@ -313,7 +313,7 @@ With `Commande`+`Shift`+`P` go to `Preferences > settings (JSON)` paste the foll
 
   // Github copilot
   "github.copilot.enable": {
-    "*": true,
+    "*": true
   },
 
   // Notebook
@@ -370,6 +370,8 @@ With `Commande`+`Shift`+`P` go to `Preferences > settings (JSON)` paste the foll
   "editor.snippetSuggestions": "top",
   "editor.inlineSuggest.enabled": true,
   "editor.cursorSmoothCaretAnimation": "on",
+  "editor.minimap.enabled": false,
+  "editor.linkedEditing": true,
   "workbench.startupEditor": "none",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.editorAssociations": {
