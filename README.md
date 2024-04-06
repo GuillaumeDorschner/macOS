@@ -2,13 +2,13 @@
 I wrote this git for the configuration of my Mac
 
 ## Install brew
-```
+```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew update
 ```
 
 ## Oh-my-zsh
-```
+```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 brew install neofetch
 
@@ -225,7 +225,7 @@ EOF
 
 
 ## Bases
-```
+```bash
 brew install git
 brew install node
 brew install python
@@ -240,7 +240,7 @@ npm install -g degit
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 ```
 then restart the terminal and create a file nano ~/.zshrc and paste it the code below
-```
+```bash
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 ```
@@ -255,7 +255,7 @@ brew insatll nmap
 
 ## Install the softwares 
 - Iterm2 (update iterm2 settings -> colors)
-```
+```bash
 brew install --cask iterm2
 brew install --cask visual-studio-code
 brew install --cask gitkraken
@@ -267,13 +267,13 @@ brew install --cask telegram
 https://docs.docker.com/docker-for-mac/install/
 
 ## Add Working directory To Program
-```
+```bash
 mkdir /Users/guillaumedorschner/Git
 mkdir /Users/guillaumedorschner/Dev
 ```
 
 ## 𝗗𝗶𝘀𝗮𝗯𝗹𝗲 𝗔𝗻𝗻𝗼𝘆𝗶𝗻𝗴 𝗗𝗶𝘀𝗸 𝗪𝗮𝗿𝗻𝗶𝗻𝗴 and capture to jpg
-```
+```bash
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.DiskArbitration.diskarbitrationd.plist DADisableEjectNotification -bool YES && sudo pkill diskarbitrationd
 # defaults write com.apple.screencapture type jpg
 ```
@@ -281,13 +281,13 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.DiskArbit
 ## The extras for a Mac
 - Magnet (it's in the app store)
 - Mos
-```
+```bash
 brew cask install mos
 ```
 
 ## Setting de VSCode
 With `Commande`+`Shift`+`P` go to `Preferences > settings (JSON)` paste the following:
-```
+```json
 {
   // Python
   "[python]": {
@@ -300,7 +300,7 @@ With `Commande`+`Shift`+`P` go to `Preferences > settings (JSON)` paste the foll
       "source.fixAll": "explicit"
     }
   },
-  "python.analysis.typeCheckingMode": "strict",
+  // "python.analysis.typeCheckingMode": "strict",
   "ruff.path": ["/Library/Frameworks/Python.framework/Versions/3.11/bin/ruff"],
   "black-formatter.path": [
     "/Library/Frameworks/Python.framework/Versions/3.11/bin/black"
@@ -373,6 +373,7 @@ With `Commande`+`Shift`+`P` go to `Preferences > settings (JSON)` paste the foll
   "editor.minimap.enabled": false,
   "editor.linkedEditing": true,
   "workbench.startupEditor": "none",
+  "workbench.sideBar.location": "right",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.editorAssociations": {
     "*.pdf": "latex-workshop-pdf-hook"
@@ -391,6 +392,7 @@ With `Commande`+`Shift`+`P` go to `Preferences > settings (JSON)` paste the foll
   "git.confirmSync": false,
   "window.confirmSaveUntitledWorkspace": false,
   "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "terminal.integrated.showExitAlert": false, // termianl: exit ot ctrl + d --> error 127 so disable showExitAlert
 
   // Code snap
   "codesnap.backgroundColor": "",
@@ -417,7 +419,8 @@ With `Commande`+`Shift`+`P` go to `Preferences > settings (JSON)` paste the foll
   "workbench.colorTheme": "Material Theme Ocean High Contrast",
   "markdown.marp.chromePath": "/Applications/Brave Browser.app",
   "markdown.marp.enableHtml": true,
-  "jupyter.askForKernelRestart": false
+  "jupyter.askForKernelRestart": false,
+  "git.openRepositoryInParentFolders": "never"
 }
 ```
 
