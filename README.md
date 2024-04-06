@@ -278,6 +278,11 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.DiskArbit
 # defaults write com.apple.screencapture type jpg
 ```
 
+## Dot files
+```bash
+defaults write com.apple.finder AppleShowAllFiles YES
+```
+
 ## The extras for a Mac
 - Magnet (it's in the app store)
 - Mos
