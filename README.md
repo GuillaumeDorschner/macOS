@@ -290,6 +290,11 @@ defaults write com.apple.finder AppleShowAllFiles YES
 brew cask install mos
 ```
 
+## Finder Shortcut
+Go to settings `Keyboard > Keyboard Shortcuts... > Services > Files and Folders` and check the following:
+![image](https://github.com/GuillaumeDorschner/Setup-Mac/assets/44686652/b4b46d93-ae25-4372-a098-9a06ec860c7d)
+
+
 ## Setting de VSCode
 With `Commande`+`Shift`+`P` go to `Preferences > settings (JSON)` paste the following:
 ```json
