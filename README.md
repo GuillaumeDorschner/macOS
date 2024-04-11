@@ -1,4 +1,4 @@
-# Setup Mac 🖥
+# macOS setup 🖥
 I wrote this git for the configuration of my Mac
 
 ## Install brew
@@ -260,6 +260,11 @@ brew instal k9s
 brew insatll nmap
 ```
 
+## Security
+authorize biometrics in the terminal. The following text must appear at the beginning of the `/etc/pam.d/sudo` file.
+```
+auth sufficient pam_tid.so
+```
 
 ## Install the softwares 
 - Iterm2 (update iterm2 settings -> colors)
