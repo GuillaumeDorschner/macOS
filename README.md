@@ -223,6 +223,14 @@ bind % split-window -h -c "#{pane_current_path}"
 EOF
 ```
 
+## Vim
+```bash
+cat <<EOF >> ~/.vimrc
+syntax on
+set number
+EOF
+```
+
 
 ## Bases
 ```bash
