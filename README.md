@@ -300,12 +300,6 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.DiskArbit
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
-# Restart automatically if the computer freezes
-sudo systemsetup -setrestartfreeze on
-
-# Disable press-and-hold for keys in favor of key repeat
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
-
 
 ###############################################################################
 # Screen                                                                      #
