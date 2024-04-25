@@ -261,9 +261,16 @@ brew insatll nmap
 ```
 
 ## Security
-authorize biometrics in the terminal. The following text must appear at the beginning of the `/etc/pam.d/sudo` file.
+> [!CAUTION]
+> 1. Create a backup!
+> ```sudo cp /etc/pam.d/sudo_local /etc/pam.d/sudo_local.bak```
+> 2. Open another sudo terminal.
+> 3. Git clone & make project for Apple Watch. See instructions [here](https://github.com/biscuitehh/pam-watchid) and [this blog](https://heywoodlh.io/macos-sudo-watch-touch-id#the-pam_tid-module-does-not-work-with-a-macbooks-lid-closed) gave me the hint.
+> 4. Modify to authorize biometrics in the terminal. Add the following text at the beginning of the `sudo nano /etc/pam.d/sudo_local` file.
 ```
-auth sufficient pam_tid.so
+# sudo_local: local config file which survives system update and is included for sudo
+auth       sufficient     pam_tid.so
+auth sufficient pam_watchid.so "reason=execute a command as root"
 ```
 
 ## Install the softwares 
