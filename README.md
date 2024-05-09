@@ -499,8 +499,11 @@ Go to settings `Keyboard > Keyboard Shortcuts... > Services > Files and Folders`
 With `Commande`+`Shift`+`P` go to `Preferences > settings (JSON)` paste the following:
 ```json
 {
-  // all languages
+  // --- Language ---
+  // all
   "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
   // Python
   "[python]": {
     "editor.formatOnSave": true,
@@ -514,14 +517,6 @@ With `Commande`+`Shift`+`P` go to `Preferences > settings (JSON)` paste the foll
   },
   // "python.analysis.typeCheckingMode": "strict",
   "ruff.path": ["/Library/Frameworks/Python.framework/Versions/3.11/bin/ruff"],
-  "black-formatter.path": [
-    "/Library/Frameworks/Python.framework/Versions/3.11/bin/black"
-  ],
-  "black-formatter.args": [
-    "--line-length",
-    "130",
-    "--experimental-string-processing"
-  ],
 
   // typescript
   "[typescriptreact]": {
@@ -564,30 +559,7 @@ With `Commande`+`Shift`+`P` go to `Preferences > settings (JSON)` paste the foll
     }
   ],
 
-  // Prettier
-  "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[yml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-
-  // General
+  // --- General VSC ---
   "editor.snippetSuggestions": "top",
   "editor.inlineSuggest.enabled": true,
   "editor.cursorSmoothCaretAnimation": "on",
@@ -613,8 +585,9 @@ With `Commande`+`Shift`+`P` go to `Preferences > settings (JSON)` paste the foll
   "git.confirmSync": false,
   "window.confirmSaveUntitledWorkspace": false,
   "terminal.integrated.enableMultiLinePasteWarning": "never",
-  "terminal.integrated.showExitAlert": false, // termianl: exit ot ctrl + d --> error 127 so disable showExitAlert
+  "terminal.integrated.showExitAlert": false, // termianl: exit ctrl + d --> error 127 so disable showExitAlert
 
+  // --- Extensions ---
   // Code snap
   "codesnap.backgroundColor": "",
   "codesnap.showWindowTitle": true,
