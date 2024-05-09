@@ -499,16 +499,18 @@ Go to settings `Keyboard > Keyboard Shortcuts... > Services > Files and Folders`
 With `Commande`+`Shift`+`P` go to `Preferences > settings (JSON)` paste the following:
 ```json
 {
+  // all languages
+  "editor.formatOnSave": true,
   // Python
   "[python]": {
     "editor.formatOnSave": true,
     "editor.tabSize": 4,
     // "editor.defaultFormatter": "ms-python.black-formatter",
-    "editor.defaultFormatter": "charliermarsh.ruff",
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit",
-      "source.fixAll": "explicit"
-    }
+    "editor.defaultFormatter": "charliermarsh.ruff"
+    // "editor.codeActionsOnSave": {
+    //   "source.organizeImports": "explicit",
+    //   "source.fixAll": "explicit"
+    // }
   },
   // "python.analysis.typeCheckingMode": "strict",
   "ruff.path": ["/Library/Frameworks/Python.framework/Versions/3.11/bin/ruff"],
@@ -521,9 +523,18 @@ With `Commande`+`Shift`+`P` go to `Preferences > settings (JSON)` paste the foll
     "--experimental-string-processing"
   ],
 
+  // typescript
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "typescript.validate.enable": false
+  },
+
   // Github copilot
   "github.copilot.enable": {
-    "*": true
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
   },
 
   // Notebook
