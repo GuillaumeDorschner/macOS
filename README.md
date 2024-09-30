@@ -274,17 +274,20 @@ auth sufficient pam_watchid.so "reason=execute a command as root"
 ```
 
 ## Install the softwares 
-- Iterm2 (update iterm2 settings -> colors)
+- terminal --> `Setting > Profile > Shell` When the shell exit to close if the shell exit cleanly
 ```bash
-brew install --cask iterm2
 brew install --cask visual-studio-code
+brew install --cask libreoffice
 brew install --cask gitkraken
 brew install --cask figma
 brew install --cask notion
-brew install --cask telegram
+
 ```
 - Docker (You can't download via brew)  
 https://docs.docker.com/docker-for-mac/install/
+
+- Libre Office
+https://youtu.be/x44bda1dz84
 
 ## Add Working directory To Program
 ```bash
